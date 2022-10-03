@@ -75,13 +75,12 @@ class Trie {
 };
 
 void solve(Trie &T, char *data) {
-        int count=0, firstL=0, secondL=0;
+        int firstL=0, secondL=0;
         string word, first, second;
         ifstream file;
         file.open(data);
         while(getline(file, word)) {
                 if (T.check(word, word.length())) {
-                        count++;
                         if (firstL < word.length()) {
                                 secondL = firstL;
                                 second = first;
